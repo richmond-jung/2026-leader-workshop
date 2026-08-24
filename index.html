@@ -338,34 +338,52 @@ footer .sub{font-size:11.5px; color:#B4ACA0; margin-top:4px;}
 .contact-call svg{width:16px; height:16px;}
 
 
-/* ---------- D-DAY / STATS / FLOW (개요 랜딩) ---------- */
-.dday-card{
-  display:flex; align-items:center; justify-content:space-between;
-  background:linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%);
+/* ---------- SURVEY CTA / FLOW (개요 랜딩) ---------- */
+.survey-card{
+  display:flex; align-items:center; gap:13px;
+  background:linear-gradient(135deg, #C9A15A 0%, #8A6326 100%);
   border-radius:var(--radius);
-  padding:18px 20px;
+  padding:16px 16px;
   color:#fff;
   text-decoration:none;
+  margin-top:10px;
   position:relative;
   overflow:hidden;
 }
-.dday-card::after{
+.survey-card::after{
   content:"";
-  position:absolute; right:-30px; bottom:-30px;
-  width:120px; height:120px; border-radius:50%;
-  border:1px solid rgba(255,255,255,0.16);
+  position:absolute; right:-26px; top:-26px;
+  width:100px; height:100px; border-radius:50%;
+  border:1px solid rgba(255,255,255,0.18);
 }
-.dday-label{font-size:11px; font-weight:700; letter-spacing:0.1em; color:rgba(255,255,255,0.75); text-transform:uppercase;}
-.dday-num{font-size:30px; font-weight:800; letter-spacing:-0.01em; margin-top:4px;}
-.dday-sub{font-size:12.5px; color:rgba(255,255,255,0.85); margin-top:3px;}
-.dday-ring{
+.survey-ic{
+  width:42px; height:42px; border-radius:12px; flex-shrink:0;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.32);
+  display:flex; align-items:center; justify-content:center;
+  position:relative; z-index:1;
+}
+.survey-ic svg{width:21px;height:21px;}
+.survey-body{flex:1; min-width:0; position:relative; z-index:1;}
+.survey-label{font-size:10.5px; font-weight:800; letter-spacing:0.05em; color:rgba(255,255,255,0.85); margin-bottom:3px;}
+.survey-title{font-size:14.5px; font-weight:800;}
+.survey-sub{font-size:11.5px; color:rgba(255,255,255,0.88); margin-top:3px; line-height:1.4; word-break:keep-all;}
+.survey-arrow{width:18px; height:18px; color:rgba(255,255,255,0.9); flex-shrink:0; position:relative; z-index:1;}
+
+.survey-hero{
+  padding:18px 20px;
+  margin-top:0;
+  justify-content:space-between;
+}
+.survey-hero .survey-title{font-size:19px; letter-spacing:-0.01em; margin-top:4px;}
+.survey-hero .survey-sub{font-size:12.5px; margin-top:6px;}
+.survey-hero .survey-ic{
   width:46px; height:46px; border-radius:50%;
   background:rgba(255,255,255,0.14);
   border:1px solid rgba(255,255,255,0.3);
-  display:flex; align-items:center; justify-content:center;
-  flex-shrink:0; position:relative; z-index:1;
+  margin-left:10px;
 }
-.dday-ring svg{width:22px;height:22px;color:#F3D9C4;}
+.survey-hero .survey-ic svg{width:22px;height:22px;}
 
 .flow-head{font-size:12px; font-weight:700; color:var(--gray); margin:26px 0 12px;}
 .flow-grid{
@@ -556,14 +574,14 @@ footer .sub{font-size:11.5px; color:#B4ACA0; margin-top:4px;}
   </div>
 
   <div class="section" style="padding-top:20px;">
-    <a class="dday-card" href="#" onclick="return false;">
-      <div>
-        <div class="dday-label">D-DAY 카운트다운</div>
-        <div class="dday-num" id="ddayNum">D-29</div>
-        <div class="dday-sub">9월 22일(화) 10:30, 오산 리더십센터</div>
+    <a class="survey-card survey-hero" href="https://docs.google.com/forms/d/e/1FAIpQLSe3m1Gh2FahhEcFQ0Qsk7TKkfZ2wE5OY_sRodblDnmD-l653A/viewform?usp=publish-editor" target="_blank" rel="noopener">
+      <div class="survey-body">
+        <div class="survey-label">사전 참석 설문 · 필수 응답</div>
+        <div class="survey-title">사전 참석 정보 설문조사</div>
+        <div class="survey-sub">전일 숙박 · 당일 숙박 · 차량번호 등을 미리 알려주세요</div>
       </div>
-      <div class="dday-ring" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+      <div class="survey-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
       </div>
     </a>
 
@@ -916,25 +934,6 @@ function showTab(name){
       body.style.maxHeight = 'none';
     }
   });
-})();
-
-// D-day 카운트다운 계산
-(function(){
-  try{
-    var el = document.getElementById('ddayNum');
-    if(!el) return;
-    var target = new Date(2026, 8, 22, 0, 0, 0); // 9월 22일
-    var now = new Date();
-    var todayMid = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    var diffDays = Math.round((target - todayMid) / (1000*60*60*24));
-    if(diffDays > 0){
-      el.textContent = 'D-' + diffDays;
-    } else if(diffDays === 0){
-      el.textContent = 'D-DAY';
-    } else {
-      el.textContent = '행사 종료';
-    }
-  }catch(e){}
 })();
 
 document.getElementById('addCal').addEventListener('click', function(){
