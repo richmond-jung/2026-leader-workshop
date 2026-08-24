@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>2026 생명과학본부 리더 워크숍</title>
+<title>2026 생명과학사업본부 리더 워크숍</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <style>
 @font-face{
@@ -417,24 +417,25 @@ footer .sub{font-size:11.5px; color:#B4ACA0; margin-top:4px;}
 .tabbar{
   position:sticky; top:10px; z-index:40;
   margin:14px 16px 0;
-  display:flex; gap:4px;
+  display:flex; gap:2px;
   background:var(--paper-2);
   border:1px solid var(--line);
   border-radius:var(--radius);
   box-shadow:0 12px 28px -18px rgba(34,30,28,0.28);
-  padding:6px;
+  padding:6px 4px;
 }
 .tab{
   flex:1;
   display:flex; flex-direction:column; align-items:center; gap:4px;
-  padding:10px 4px 9px;
+  padding:9px 2px 8px;
   background:none; border:none; font-family:inherit;
-  font-size:11px; font-weight:700; color:var(--gray);
+  font-size:10px; font-weight:700; color:var(--gray);
   cursor:pointer;
-  border-radius:13px;
+  border-radius:12px;
   transition:background .2s ease, color .2s ease;
+  white-space:nowrap;
 }
-.tab .tic{width:18px;height:18px;}
+.tab .tic{width:17px;height:17px;}
 .tab.active{background:var(--red); color:#fff;}
 
 /* ---------- PANELS ---------- */
@@ -494,6 +495,56 @@ footer .sub{font-size:11.5px; color:#B4ACA0; margin-top:4px;}
 .map-card-txt span{font-size:12px; color:var(--gray);}
 .map-card-arrow{width:16px;height:16px;color:var(--gray); flex-shrink:0;}
 
+/* ---------- GROUP LOOKUP (본인 조 확인) ---------- */
+.pending-note{
+  background:#FBEAEC; border:1px solid #F0C9CD; border-radius:14px;
+  padding:14px 16px; font-size:12.5px; color:#7A2230; line-height:1.6;
+  margin-bottom:16px; word-break:keep-all;
+}
+.pending-note b{display:block; font-size:13px; margin-bottom:4px; color:var(--red);}
+
+.search-box{
+  display:flex; align-items:center; gap:10px;
+  background:var(--paper-2); border:1px solid var(--line); border-radius:14px;
+  padding:12px 14px; margin-bottom:8px;
+}
+.search-box svg{width:17px;height:17px;color:var(--gray); flex-shrink:0;}
+.search-box input{
+  flex:1; border:none; outline:none; background:none;
+  font-family:inherit; font-size:14px; color:var(--ink);
+}
+.search-box input::placeholder{color:#B4ACA0;}
+.search-count{font-size:11.5px; color:var(--gray); margin:0 2px 12px; min-height:14px;}
+
+.gtable{
+  background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius);
+  overflow:hidden;
+}
+.gtable-head{
+  display:grid; grid-template-columns:0.7fr 1.5fr 1.3fr 1.3fr;
+  padding:10px 12px;
+  background:#F1EDE3;
+  font-size:10.5px; font-weight:800; color:var(--gray); letter-spacing:0.02em;
+}
+.gtable-row{
+  display:grid; grid-template-columns:0.7fr 1.5fr 1.3fr 1.3fr;
+  padding:12px 12px;
+  border-top:1px solid var(--line);
+  align-items:center;
+}
+.gcell{font-size:12.5px; color:var(--ink); word-break:keep-all; line-height:1.3;}
+.gtag{
+  display:inline-flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:800; color:var(--red);
+  background:#FBEAEC; border-radius:7px; padding:3px 0; width:32px;
+}
+.gname{font-weight:800;}
+.gorg, .gtitle{color:var(--gray); font-size:11.5px;}
+.gtable-empty{
+  padding:26px 12px; text-align:center; font-size:12.5px; color:var(--gray);
+  border-top:1px solid var(--line);
+}
+
 @media (min-width:420px){
   .trow{grid-template-columns:52px 1fr;}
   .timeline::before{left:52px;}
@@ -506,7 +557,7 @@ footer .sub{font-size:11.5px; color:#B4ACA0; margin-top:4px;}
 
   <!-- HERO -->
   <div class="hero">
-    <div class="eyebrow"><span class="dot"></span>2026 생명과학본부 LEADERSHIP WORKSHOP</div>
+    <div class="eyebrow"><span class="dot"></span>2026 생명과학사업본부 LEADERSHIP WORKSHOP</div>
     <h1>Connect to<br><span>Convert</span></h1>
     <p class="theme">‘연결된 리더십, 더 높이 도약하는 <b>생명과학</b>’</p>
     <div class="chips">
@@ -537,7 +588,7 @@ footer .sub{font-size:11.5px; color:#B4ACA0; margin-top:4px;}
     <div class="qcard">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
       <div class="lbl">참석</div>
-      <div class="val">팀장 이상<br>185명</div>
+      <div class="val">팀장 이상<br>리더 185명</div>
     </div>
   </div>
 
@@ -558,6 +609,10 @@ footer .sub{font-size:11.5px; color:#B4ACA0; margin-top:4px;}
     <button class="tab" data-tab="faq" onclick="showTab('faq')" type="button">
       <svg class="tic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
       문의처
+    </button>
+    <button class="tab" data-tab="group" onclick="showTab('group')" type="button">
+      <svg class="tic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      본인 조 확인
     </button>
   </nav>
 
@@ -848,7 +903,7 @@ footer .sub{font-size:11.5px; color:#B4ACA0; margin-top:4px;}
       <button class="acc-head" id="accToggle" aria-expanded="true">
         <span class="acc-head-left">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <b>HRBP팀 담당자 3명</b>
+          <b>HRBP팀 담당자 4명</b>
         </span>
         <svg class="acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
       </button>
@@ -883,6 +938,16 @@ footer .sub{font-size:11.5px; color:#B4ACA0; margin-top:4px;}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </a>
         </div>
+        <div class="contact-row">
+          <div class="contact-avatar">정</div>
+          <div class="contact-body">
+            <div class="contact-name">정세광 책임</div>
+            <div class="contact-meta">HRBP팀 · 010-2544-5473</div>
+          </div>
+          <a class="contact-call" href="tel:010-2544-5473" aria-label="정세광 책임에게 전화하기">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -890,9 +955,594 @@ footer .sub{font-size:11.5px; color:#B4ACA0; margin-top:4px;}
   </div>
   <!-- /panel p-faq -->
 
+  <div class="panel" id="p-group">
+    <div class="section">
+      <div class="section-head">
+        <div class="kicker">My Group</div>
+        <h2>본인 조 확인</h2>
+        <p>이름을 검색하면 소속된 조를 바로 확인할 수 있어요.</p>
+      </div>
+
+      <div class="pending-note">
+        <b>⚠️ 임의 생성 데이터입니다</b>
+        아래 185명 명단은 화면 구성을 보여주기 위해 무작위로 생성한 가상의 데이터예요. 실제 조 편성 명단(조·소속·이름·직책)을 엑셀(또는 CSV) 파일로 주시면 실제 데이터로 교체해드릴게요.
+      </div>
+
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" id="groupSearch" placeholder="이름으로 검색 (예: 홍길동)" autocomplete="off">
+      </div>
+      <div class="search-count" id="searchCount"></div>
+
+      <div class="gtable">
+        <div class="gtable-head">
+          <span>조</span><span>소속</span><span>이름</span><span>직책</span>
+        </div>
+        <div class="gtable-body" id="gtableBody">
+          <div class="gtable-row" data-name="최민아" data-org="마케팅전략팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">마케팅전략팀</span><span class="gcell gname">최민아</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="윤수아" data-org="공정기술그룹">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">공정기술그룹</span><span class="gcell gname">윤수아</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="양건영" data-org="해외사업팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">해외사업팀</span><span class="gcell gname">양건영</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="신서민" data-org="환경안전팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">환경안전팀</span><span class="gcell gname">신서민</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="윤진원" data-org="생산기술그룹">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">생산기술그룹</span><span class="gcell gname">윤진원</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="조경석" data-org="설비기술팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">설비기술팀</span><span class="gcell gname">조경석</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="윤은규" data-org="경영전략그룹">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">경영전략그룹</span><span class="gcell gname">윤은규</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="허민린" data-org="오송공장운영팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">오송공장운영팀</span><span class="gcell gname">허민린</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="신성예" data-org="데이터사이언스팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">신성예</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="손성현" data-org="생산기술그룹">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">생산기술그룹</span><span class="gcell gname">손성현</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="최태찬" data-org="사업개발팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">사업개발팀</span><span class="gcell gname">최태찬</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="장빈서" data-org="재무회계팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">재무회계팀</span><span class="gcell gname">장빈서</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="최슬윤" data-org="설비기술팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">설비기술팀</span><span class="gcell gname">최슬윤</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="임율석" data-org="설비기술팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">설비기술팀</span><span class="gcell gname">임율석</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="전도경" data-org="임상운영팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">임상운영팀</span><span class="gcell gname">전도경</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="고하린" data-org="바이오공정개발팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">바이오공정개발팀</span><span class="gcell gname">고하린</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="허하찬" data-org="임상개발팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">임상개발팀</span><span class="gcell gname">허하찬</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="장은석" data-org="사업개발팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">사업개발팀</span><span class="gcell gname">장은석</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="오태도" data-org="품질관리팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">품질관리팀</span><span class="gcell gname">오태도</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="남훈석" data-org="데이터사이언스팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">남훈석</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="류준영" data-org="재무회계팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">재무회계팀</span><span class="gcell gname">류준영</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="권윤예" data-org="품질관리팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">품질관리팀</span><span class="gcell gname">권윤예</span><span class="gcell gtitle">센터장</span>
+          </div>
+          <div class="gtable-row" data-name="송하훈" data-org="데이터사이언스팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">송하훈</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="손린서" data-org="익산공장운영팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">익산공장운영팀</span><span class="gcell gname">손린서</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="이빈성" data-org="익산공장운영팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">익산공장운영팀</span><span class="gcell gname">이빈성</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="박도슬" data-org="제제연구팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">제제연구팀</span><span class="gcell gname">박도슬</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="한도석" data-org="데이터사이언스팀">
+            <span class="gcell gtag">1조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">한도석</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="유슬석" data-org="사업개발팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">사업개발팀</span><span class="gcell gname">유슬석</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="장수하" data-org="품질보증팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">품질보증팀</span><span class="gcell gname">장수하</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="장아규" data-org="설비기술팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">설비기술팀</span><span class="gcell gname">장아규</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="서태하" data-org="환경안전팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">환경안전팀</span><span class="gcell gname">서태하</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="황지린" data-org="생산관리팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">생산관리팀</span><span class="gcell gname">황지린</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="정석준" data-org="약리연구팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">약리연구팀</span><span class="gcell gname">정석준</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="박윤윤" data-org="재무회계팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">재무회계팀</span><span class="gcell gname">박윤윤</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="안예영" data-org="인사기획팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">인사기획팀</span><span class="gcell gname">안예영</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="양현훈" data-org="해외사업팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">해외사업팀</span><span class="gcell gname">양현훈</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="장린석" data-org="신약사업팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">신약사업팀</span><span class="gcell gname">장린석</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="임재준" data-org="약리연구팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">약리연구팀</span><span class="gcell gname">임재준</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="양건아" data-org="신약연구소">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">신약연구소</span><span class="gcell gname">양건아</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="손준진" data-org="생산관리팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">생산관리팀</span><span class="gcell gname">손준진</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="안원도" data-org="마케팅전략팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">마케팅전략팀</span><span class="gcell gname">안원도</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="손준영" data-org="임상운영팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">임상운영팀</span><span class="gcell gname">손준영</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="홍성호" data-org="신약연구소">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">신약연구소</span><span class="gcell gname">홍성호</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="남태건" data-org="약리연구팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">약리연구팀</span><span class="gcell gname">남태건</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="이하건" data-org="공정기술그룹">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">공정기술그룹</span><span class="gcell gname">이하건</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="박아호" data-org="임상개발팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">임상개발팀</span><span class="gcell gname">박아호</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="송린수" data-org="신약사업팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">신약사업팀</span><span class="gcell gname">송린수</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="황영준" data-org="해외사업팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">해외사업팀</span><span class="gcell gname">황영준</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="허원재" data-org="생산관리팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">생산관리팀</span><span class="gcell gname">허원재</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="손아경" data-org="설비기술팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">설비기술팀</span><span class="gcell gname">손아경</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="임윤훈" data-org="데이터사이언스팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">임윤훈</span><span class="gcell gtitle">센터장</span>
+          </div>
+          <div class="gtable-row" data-name="권건진" data-org="임상운영팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">임상운영팀</span><span class="gcell gname">권건진</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="윤하지" data-org="약리연구팀">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">약리연구팀</span><span class="gcell gname">윤하지</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="전영하" data-org="신약연구소">
+            <span class="gcell gtag">2조</span><span class="gcell gorg">신약연구소</span><span class="gcell gname">전영하</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="김지경" data-org="공정기술그룹">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">공정기술그룹</span><span class="gcell gname">김지경</span><span class="gcell gtitle">센터장</span>
+          </div>
+          <div class="gtable-row" data-name="윤지건" data-org="바이오공정개발팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">바이오공정개발팀</span><span class="gcell gname">윤지건</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="박진하" data-org="규제과학팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">규제과학팀</span><span class="gcell gname">박진하</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="황도영" data-org="해외사업팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">해외사업팀</span><span class="gcell gname">황도영</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="남건규" data-org="R&D기획팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">R&D기획팀</span><span class="gcell gname">남건규</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="윤빈호" data-org="구매팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">구매팀</span><span class="gcell gname">윤빈호</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="최현훈" data-org="생산기술그룹">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">생산기술그룹</span><span class="gcell gname">최현훈</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="신재은" data-org="임상운영팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">임상운영팀</span><span class="gcell gname">신재은</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="류석현" data-org="해외사업팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">해외사업팀</span><span class="gcell gname">류석현</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="양성빈" data-org="사업개발팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">사업개발팀</span><span class="gcell gname">양성빈</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="조도영" data-org="공정기술그룹">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">공정기술그룹</span><span class="gcell gname">조도영</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="신준예" data-org="품질보증팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">품질보증팀</span><span class="gcell gname">신준예</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="허슬지" data-org="공정기술그룹">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">공정기술그룹</span><span class="gcell gname">허슬지</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="허찬영" data-org="오송공장운영팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">오송공장운영팀</span><span class="gcell gname">허찬영</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="류영율" data-org="바이오공정개발팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">바이오공정개발팀</span><span class="gcell gname">류영율</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="남린찬" data-org="임상개발팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">임상개발팀</span><span class="gcell gname">남린찬</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="신호호" data-org="품질관리팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">품질관리팀</span><span class="gcell gname">신호호</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="유서준" data-org="사업개발팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">사업개발팀</span><span class="gcell gname">유서준</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="서예슬" data-org="신약연구소">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">신약연구소</span><span class="gcell gname">서예슬</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="신경아" data-org="합성연구팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">합성연구팀</span><span class="gcell gname">신경아</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="문호수" data-org="해외사업팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">해외사업팀</span><span class="gcell gname">문호수</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="조서규" data-org="합성연구팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">합성연구팀</span><span class="gcell gname">조서규</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="양성서" data-org="바이오공정개발팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">바이오공정개발팀</span><span class="gcell gname">양성서</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="황진슬" data-org="환경안전팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">환경안전팀</span><span class="gcell gname">황진슬</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="이진지" data-org="품질관리팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">품질관리팀</span><span class="gcell gname">이진지</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="홍지훈" data-org="임상개발팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">임상개발팀</span><span class="gcell gname">홍지훈</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="최건규" data-org="사업개발팀">
+            <span class="gcell gtag">3조</span><span class="gcell gorg">사업개발팀</span><span class="gcell gname">최건규</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="홍서원" data-org="환경안전팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">환경안전팀</span><span class="gcell gname">홍서원</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="고규규" data-org="경영전략그룹">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">경영전략그룹</span><span class="gcell gname">고규규</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="남예도" data-org="규제과학팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">규제과학팀</span><span class="gcell gname">남예도</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="장윤수" data-org="공정기술그룹">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">공정기술그룹</span><span class="gcell gname">장윤수</span><span class="gcell gtitle">센터장</span>
+          </div>
+          <div class="gtable-row" data-name="권성슬" data-org="합성연구팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">합성연구팀</span><span class="gcell gname">권성슬</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="권원규" data-org="신약연구소">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">신약연구소</span><span class="gcell gname">권원규</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="송도진" data-org="임상개발팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">임상개발팀</span><span class="gcell gname">송도진</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="박건하" data-org="품질보증팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">품질보증팀</span><span class="gcell gname">박건하</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="강은율" data-org="합성연구팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">합성연구팀</span><span class="gcell gname">강은율</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="임원빈" data-org="데이터사이언스팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">임원빈</span><span class="gcell gtitle">센터장</span>
+          </div>
+          <div class="gtable-row" data-name="김훈율" data-org="생산관리팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">생산관리팀</span><span class="gcell gname">김훈율</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="남훈현" data-org="합성연구팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">합성연구팀</span><span class="gcell gname">남훈현</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="최건현" data-org="제제연구팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">제제연구팀</span><span class="gcell gname">최건현</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="장우원" data-org="품질보증팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">품질보증팀</span><span class="gcell gname">장우원</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="한도훈" data-org="데이터사이언스팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">한도훈</span><span class="gcell gtitle">센터장</span>
+          </div>
+          <div class="gtable-row" data-name="안호예" data-org="제제연구팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">제제연구팀</span><span class="gcell gname">안호예</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="류재율" data-org="임상개발팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">임상개발팀</span><span class="gcell gname">류재율</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="김성린" data-org="바이오공정개발팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">바이오공정개발팀</span><span class="gcell gname">김성린</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="장준아" data-org="마케팅전략팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">마케팅전략팀</span><span class="gcell gname">장준아</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="문재영" data-org="설비기술팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">설비기술팀</span><span class="gcell gname">문재영</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="박건경" data-org="약리연구팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">약리연구팀</span><span class="gcell gname">박건경</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="이율태" data-org="설비기술팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">설비기술팀</span><span class="gcell gname">이율태</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="정재수" data-org="설비기술팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">설비기술팀</span><span class="gcell gname">정재수</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="오건슬" data-org="합성연구팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">합성연구팀</span><span class="gcell gname">오건슬</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="조훈하" data-org="임상운영팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">임상운영팀</span><span class="gcell gname">조훈하</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="손영건" data-org="임상운영팀">
+            <span class="gcell gtag">4조</span><span class="gcell gorg">임상운영팀</span><span class="gcell gname">손영건</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="양수슬" data-org="재무회계팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">재무회계팀</span><span class="gcell gname">양수슬</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="배빈준" data-org="품질관리팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">품질관리팀</span><span class="gcell gname">배빈준</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="강아슬" data-org="신약연구소">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">신약연구소</span><span class="gcell gname">강아슬</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="남재빈" data-org="오송공장운영팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">오송공장운영팀</span><span class="gcell gname">남재빈</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="강빈경" data-org="제제연구팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">제제연구팀</span><span class="gcell gname">강빈경</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="허서찬" data-org="사업개발팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">사업개발팀</span><span class="gcell gname">허서찬</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="조율슬" data-org="공정기술그룹">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">공정기술그룹</span><span class="gcell gname">조율슬</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="임율빈" data-org="임상운영팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">임상운영팀</span><span class="gcell gname">임율빈</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="김훈도" data-org="공정기술그룹">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">공정기술그룹</span><span class="gcell gname">김훈도</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="장찬지" data-org="규제과학팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">규제과학팀</span><span class="gcell gname">장찬지</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="류진윤" data-org="임상운영팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">임상운영팀</span><span class="gcell gname">류진윤</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="김현건" data-org="규제과학팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">규제과학팀</span><span class="gcell gname">김현건</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="전예서" data-org="품질관리팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">품질관리팀</span><span class="gcell gname">전예서</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="신태아" data-org="재무회계팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">재무회계팀</span><span class="gcell gname">신태아</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="홍진현" data-org="경영전략그룹">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">경영전략그룹</span><span class="gcell gname">홍진현</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="조예서" data-org="환경안전팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">환경안전팀</span><span class="gcell gname">조예서</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="안슬빈" data-org="신약연구소">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">신약연구소</span><span class="gcell gname">안슬빈</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="양아아" data-org="해외사업팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">해외사업팀</span><span class="gcell gname">양아아</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="신지훈" data-org="임상운영팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">임상운영팀</span><span class="gcell gname">신지훈</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="한훈찬" data-org="재무회계팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">재무회계팀</span><span class="gcell gname">한훈찬</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="유우진" data-org="R&D기획팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">R&D기획팀</span><span class="gcell gname">유우진</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="신성윤" data-org="해외사업팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">해외사업팀</span><span class="gcell gname">신성윤</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="정도재" data-org="설비기술팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">설비기술팀</span><span class="gcell gname">정도재</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="양건준" data-org="해외사업팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">해외사업팀</span><span class="gcell gname">양건준</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="임윤영" data-org="환경안전팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">환경안전팀</span><span class="gcell gname">임윤영</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="임도재" data-org="합성연구팀">
+            <span class="gcell gtag">5조</span><span class="gcell gorg">합성연구팀</span><span class="gcell gname">임도재</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="류성은" data-org="재무회계팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">재무회계팀</span><span class="gcell gname">류성은</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="고도진" data-org="인사기획팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">인사기획팀</span><span class="gcell gname">고도진</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="유빈아" data-org="오송공장운영팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">오송공장운영팀</span><span class="gcell gname">유빈아</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="박우진" data-org="해외사업팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">해외사업팀</span><span class="gcell gname">박우진</span><span class="gcell gtitle">센터장</span>
+          </div>
+          <div class="gtable-row" data-name="한지율" data-org="재무회계팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">재무회계팀</span><span class="gcell gname">한지율</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="임하빈" data-org="해외사업팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">해외사업팀</span><span class="gcell gname">임하빈</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="김서하" data-org="품질보증팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">품질보증팀</span><span class="gcell gname">김서하</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="허린지" data-org="재무회계팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">재무회계팀</span><span class="gcell gname">허린지</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="유석규" data-org="경영전략그룹">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">경영전략그룹</span><span class="gcell gname">유석규</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="문윤호" data-org="데이터사이언스팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">문윤호</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="정석경" data-org="공정기술그룹">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">공정기술그룹</span><span class="gcell gname">정석경</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="허린건" data-org="신약사업팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">신약사업팀</span><span class="gcell gname">허린건</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="신하준" data-org="신약사업팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">신약사업팀</span><span class="gcell gname">신하준</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="이영하" data-org="인사기획팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">인사기획팀</span><span class="gcell gname">이영하</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="정빈은" data-org="인사기획팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">인사기획팀</span><span class="gcell gname">정빈은</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="홍성린" data-org="설비기술팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">설비기술팀</span><span class="gcell gname">홍성린</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="백아건" data-org="재무회계팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">재무회계팀</span><span class="gcell gname">백아건</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="백슬영" data-org="경영전략그룹">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">경영전략그룹</span><span class="gcell gname">백슬영</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="양찬호" data-org="품질관리팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">품질관리팀</span><span class="gcell gname">양찬호</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="손하율" data-org="제제연구팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">제제연구팀</span><span class="gcell gname">손하율</span><span class="gcell gtitle">센터장</span>
+          </div>
+          <div class="gtable-row" data-name="손린진" data-org="제제연구팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">제제연구팀</span><span class="gcell gname">손린진</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="윤예은" data-org="마케팅전략팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">마케팅전략팀</span><span class="gcell gname">윤예은</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="임하예" data-org="데이터사이언스팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">임하예</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="유영지" data-org="규제과학팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">규제과학팀</span><span class="gcell gname">유영지</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="윤윤경" data-org="품질보증팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">품질보증팀</span><span class="gcell gname">윤윤경</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="조지재" data-org="데이터사이언스팀">
+            <span class="gcell gtag">6조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">조지재</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="송은재" data-org="규제과학팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">규제과학팀</span><span class="gcell gname">송은재</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="백재윤" data-org="생산기술그룹">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">생산기술그룹</span><span class="gcell gname">백재윤</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="김찬건" data-org="데이터사이언스팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">김찬건</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="황민태" data-org="사업개발팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">사업개발팀</span><span class="gcell gname">황민태</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="서찬건" data-org="신약사업팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">신약사업팀</span><span class="gcell gname">서찬건</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="양아영" data-org="설비기술팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">설비기술팀</span><span class="gcell gname">양아영</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="황하예" data-org="공정기술그룹">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">공정기술그룹</span><span class="gcell gname">황하예</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="김윤성" data-org="구매팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">구매팀</span><span class="gcell gname">김윤성</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="강율은" data-org="R&D기획팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">R&D기획팀</span><span class="gcell gname">강율은</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="송민슬" data-org="재무회계팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">재무회계팀</span><span class="gcell gname">송민슬</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="전훈민" data-org="환경안전팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">환경안전팀</span><span class="gcell gname">전훈민</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="신수찬" data-org="마케팅전략팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">마케팅전략팀</span><span class="gcell gname">신수찬</span><span class="gcell gtitle">부문장</span>
+          </div>
+          <div class="gtable-row" data-name="이예윤" data-org="품질관리팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">품질관리팀</span><span class="gcell gname">이예윤</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="권성성" data-org="생산기술그룹">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">생산기술그룹</span><span class="gcell gname">권성성</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="손율재" data-org="제제연구팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">제제연구팀</span><span class="gcell gname">손율재</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="박호민" data-org="익산공장운영팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">익산공장운영팀</span><span class="gcell gname">박호민</span><span class="gcell gtitle">실장</span>
+          </div>
+          <div class="gtable-row" data-name="오하석" data-org="바이오공정개발팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">바이오공정개발팀</span><span class="gcell gname">오하석</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="류서린" data-org="신약사업팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">신약사업팀</span><span class="gcell gname">류서린</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="조율민" data-org="공정기술그룹">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">공정기술그룹</span><span class="gcell gname">조율민</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="윤수호" data-org="품질보증팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">품질보증팀</span><span class="gcell gname">윤수호</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="조은경" data-org="환경안전팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">환경안전팀</span><span class="gcell gname">조은경</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="오준원" data-org="신약사업팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">신약사업팀</span><span class="gcell gname">오준원</span><span class="gcell gtitle">수석연구위원</span>
+          </div>
+          <div class="gtable-row" data-name="문현린" data-org="R&D기획팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">R&D기획팀</span><span class="gcell gname">문현린</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="최규민" data-org="합성연구팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">합성연구팀</span><span class="gcell gname">최규민</span><span class="gcell gtitle">팀장</span>
+          </div>
+          <div class="gtable-row" data-name="고슬윤" data-org="환경안전팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">환경안전팀</span><span class="gcell gname">고슬윤</span><span class="gcell gtitle">그룹장</span>
+          </div>
+          <div class="gtable-row" data-name="조지규" data-org="데이터사이언스팀">
+            <span class="gcell gtag">7조</span><span class="gcell gorg">데이터사이언스팀</span><span class="gcell gname">조지규</span><span class="gcell gtitle">센터장</span>
+          </div>
+        </div>
+        <div class="gtable-empty" id="gtableEmpty" style="display:none;">검색 결과가 없습니다.</div>
+      </div>
+    </div>
+  </div>
+  <!-- /panel p-group -->
 
   <footer>
-    <div class="brand">LG화학 · 생명과학본부</div>
+    <div class="brand">LG화학 · 생명과학사업본부</div>
     <div class="sub">2026 Leader Workshop</div>
   </footer>
 
@@ -900,7 +1550,7 @@ footer .sub{font-size:11.5px; color:#B4ACA0; margin-top:4px;}
 
 <script>
 function showTab(name){
-  ['info','schedule','location','faq'].forEach(function(n){
+  ['info','schedule','location','faq','group'].forEach(function(n){
     var btn = document.querySelector('.tab[data-tab="'+n+'"]');
     var panel = document.getElementById('p-'+n);
     if(btn) btn.classList.toggle('active', n===name);
@@ -908,6 +1558,28 @@ function showTab(name){
   });
   window.scrollTo({top:0, behavior:'smooth'});
 }
+
+// 본인 조 확인 - 이름 검색 필터
+(function(){
+  var input = document.getElementById('groupSearch');
+  var rows = document.querySelectorAll('#gtableBody .gtable-row');
+  var emptyEl = document.getElementById('gtableEmpty');
+  var countEl = document.getElementById('searchCount');
+  if(!input) return;
+  input.addEventListener('input', function(){
+    var q = input.value.trim().toLowerCase();
+    var visibleCount = 0;
+    rows.forEach(function(row){
+      var name = (row.getAttribute('data-name') || '').toLowerCase();
+      var org = (row.getAttribute('data-org') || '').toLowerCase();
+      var match = q === '' || name.indexOf(q) !== -1 || org.indexOf(q) !== -1;
+      row.style.display = match ? '' : 'none';
+      if(match) visibleCount++;
+    });
+    emptyEl.style.display = visibleCount === 0 ? 'block' : 'none';
+    countEl.textContent = q === '' ? '' : (visibleCount + '명 검색됨');
+  });
+})();
 
 // 문의처 접이식 토글
 (function(){
@@ -937,7 +1609,7 @@ function showTab(name){
 })();
 
 document.getElementById('addCal').addEventListener('click', function(){
-  var text = encodeURIComponent("2026 생명과학본부 리더 워크숍 (Connect to Convert)");
+  var text = encodeURIComponent("2026 생명과학사업본부 리더 워크숍 (Connect to Convert)");
   var dates = "20260922T103000/20260922T190000";
   var details = encodeURIComponent("주제: From Connect to Convert - 연결된 리더십, 더 높이 도약하는 생명과학\\n대상: 본부 팀장 이상 리더");
   var loc = encodeURIComponent("오산 리더십센터");
