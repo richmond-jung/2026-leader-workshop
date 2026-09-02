@@ -118,6 +118,13 @@ a{color:inherit;}
 }
 .ovrow .txt b{display:block; font-size:14px; font-weight:700; margin-bottom:3px;}
 .ovrow .txt span{font-size:13.5px; color:#5A5872; word-break:keep-all;}
+.overview-notice{
+  display:flex; align-items:center; gap:6px;
+  margin-top:14px;
+  font-size:12px; font-weight:500; color:var(--gray);
+  word-break:keep-all;
+}
+.overview-notice svg{width:14px; height:14px; flex-shrink:0; color:var(--gray);}
 .ovrow .txt .tag{
   display:inline-block; margin-top:6px;
   font-size:11.5px; font-weight:700; color:var(--red);
@@ -499,9 +506,14 @@ footer .sub{font-size:11.5px; color:#A8A3BE; margin-top:4px;}
 .bus-route-note{
   margin-top:10px; padding-top:10px;
   border-top:1px solid var(--line);
-  font-size:11px; color:var(--gray); text-align:center;
-  word-break:keep-all;
+  display:flex; flex-direction:column; gap:7px;
 }
+.bus-note-item{
+  display:flex; align-items:flex-start; gap:6px;
+  font-size:11.5px; color:var(--gray); line-height:1.5; word-break:keep-all;
+}
+.bus-note-item svg{width:13px; height:13px; flex-shrink:0; margin-top:2px; color:var(--red);}
+.bus-note-item b{color:var(--ink); font-weight:700;}
 .carpool-badge{background:#EAF0E6; color:#5B7A4A;}
 .carpool-desc{
   display:flex; align-items:flex-start; gap:10px;
@@ -527,6 +539,10 @@ footer .sub{font-size:11.5px; color:#A8A3BE; margin-top:4px;}
   position:relative; z-index:1; margin-bottom:6px;
 }
 .bus-stop-name{font-size:11px; font-weight:700; color:var(--ink); text-align:center; line-height:1.35; word-break:keep-all;}
+.bus-stop-detail{
+  font-size:9.5px; color:var(--gray); text-align:center;
+  line-height:1.35; margin-top:3px; word-break:keep-all; max-width:92px;
+}
 .bus-note{
   font-size:11.5px; color:var(--gray); line-height:1.6;
   padding:2px 2px 0; word-break:keep-all;
@@ -700,7 +716,8 @@ footer .sub{font-size:11.5px; color:#A8A3BE; margin-top:4px;}
   </div>
 
   <div class="overview-notice">
-   &nbsp;&nbsp ※ 자세한 내용은 추후 다시 안내드리겠습니다.
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    자세한 내용은 추후 다시 안내드리겠습니다.
   </div>
 </div>
 
@@ -897,11 +914,13 @@ footer .sub{font-size:11.5px; color:#A8A3BE; margin-top:4px;}
       <div class="bus-stop-time">07:30</div>
       <div class="bus-stop-dot"></div>
       <div class="bus-stop-name">마곡<br>사이언스파크</div>
+      <div class="bus-stop-detail">E6동 필로티 앞</div>
     </div>
     <div class="bus-stop">
       <div class="bus-stop-time">07:50</div>
       <div class="bus-stop-dot"></div>
       <div class="bus-stop-name">고속버스<br>터미널</div>
+      <div class="bus-stop-detail">GS칼텍스 대성터미널<br>주유소 출구</div>
     </div>
     <div class="bus-stop">
       <div class="bus-stop-time">10:30</div>
@@ -909,7 +928,6 @@ footer .sub{font-size:11.5px; color:#A8A3BE; margin-top:4px;}
       <div class="bus-stop-name">오산<br>리더십센터</div>
     </div>
   </div>
-  <div class="bus-route-note">마곡 E6동 필로티 앞 탑승 · 고속버스터미널 GS칼텍스 대성터미널 주유소 출구 탑승</div>
 </div>
 
     <div class="bus-route">
@@ -922,6 +940,7 @@ footer .sub{font-size:11.5px; color:#A8A3BE; margin-top:4px;}
           <div class="bus-stop-time">09:00</div>
           <div class="bus-stop-dot"></div>
           <div class="bus-stop-name">오송공장<br>정문앞</div>
+          <div class="bus-stop-detail">정문앞 상하차</div>
         </div>
         <div class="bus-stop">
           <div class="bus-stop-time">10:30</div>
@@ -929,7 +948,6 @@ footer .sub{font-size:11.5px; color:#A8A3BE; margin-top:4px;}
           <div class="bus-stop-name">오산<br>리더십센터</div>
         </div>
       </div>
-      <div class="bus-route-note">오송공장 정문앞 상하차 · 중간경유 없음</div>
     </div>
 
     <div class="bus-note">* 복귀 시에도 동일한 지점(마곡·고속버스터미널 / 오송공장)으로 운행됩니다. 복귀 출발 시간은 행사 종료 후 별도 안내드릴 예정입니다.
